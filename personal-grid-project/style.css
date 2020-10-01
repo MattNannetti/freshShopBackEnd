@@ -1,0 +1,83 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+img{
+
+    width: 250px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "pic1 pic2 pic3 pic4" "pic5 Main Main pic6" "pic7 Main Main pic8" "pic9 pic10 pic11 pic12";
+  }
+  
+  .Main { 
+
+      grid-area: Main; 
+    
+    }
+  
+  .pic1 { 
+      grid-area: pic1;
+      width: 50px;
+
+}
+  
+  .pic2 { 
+      grid-area: pic2;
+      width: 50px;
+    }
+  
+  .pic3 { 
+      grid-area: pic3;
+    width: 50px;
+}
+  
+  .pic4 { 
+      grid-area: pic4;
+      width: 50px;
+    }
+  
+  .pic5 { 
+      grid-area: pic5;
+      width: 50px;
+    }
+  
+  .pic6 { 
+      grid-area: pic6;
+      width: 50px;
+    }
+  
+  .pic7 { 
+      grid-area: pic7;
+      width: 50px;
+    }
+  
+  .pic8 { 
+      grid-area: pic8;
+      width: 50px;
+    }
+  
+  .pic9 { 
+      grid-area: pic9;
+      width: 50px;
+    }
+  
+  .pic10 { 
+      grid-area: pic10;
+      width: 50px;
+    }
+  
+  .pic11 { 
+      grid-area: pic11;
+      width: 50px;
+    }
+  
+  .pic12 { 
+      grid-area: pic12;
+      width: 50px;
+    }

@@ -1,0 +1,151 @@
+##VARIABLES
+
+1.
+
+A = 13
+
+B = 13
+
+C = 13 
+
+
+
+
+2.
+
+A = 2
+
+B = 2
+
+C = 7
+
+
+
+
+3.
+
+A = 5
+
+B = 
+
+C = 
+
+
+
+
+##Declaration, definition or assignment?
+
+1. assignment
+2. declaration
+3. assignment
+4. declaration
+5. assignment
+
+
+##Data types:
+
+1. True
+2. False
+3. True
+4. False
+
+
+
+
+##if- and switch- statement
+
+1. 
+var number = user input
+
+if (number < 0)
+return True
+
+
+2.
+function number (a, b){
+if (a*b < 0)
+return True
+}
+
+
+3.
+function age (){
+
+	if (age < 1)
+	return "baby"
+
+	else if(age < 3)
+	return "toddler"
+
+	else if(age < 5)
+	return "preschool"
+
+	else if(age < 12)
+	return "gradeschool"
+}
+
+
+
+
+## for-loops & while-loops
+
+1.
+var number = userinput
+	while (i=0 ; i<10 ; number ++)
+	return number
+
+2.
+var number = userinput
+	for (i=0 ; i<10 ; number ++)
+	return number
+
+3.
+var number = userinput
+	for (i=0 ; i<number ; i++)
+	return i + number
+
+
+4.
+var number = userinput
+	for (i=1 ; i<number ; i++)
+	return number =  i * number
+
+
+
+##ARRAYS
+
+
+1.
+function myFunction (n){
+	addArray.mathRandom to n
+}
+	
+
+
+2.
+function myFunction (){
+	array/array.length
+}
+
+
+3.
+function myFunction () {
+	if (array[] <= 0)
+	return positive
+
+	else
+	return negative
+}
+	
+
+
+
+
+
+##EXTRA
+
+1. 0
+2. 6
+3. 2
+4. 2
+5. 0
