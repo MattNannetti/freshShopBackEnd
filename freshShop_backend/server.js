@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== 'production'){
-    require('dotenv').config();
-}
+//if (process.env.NODE_ENV !== 'production'){
+//    require('dotenv').config();
+//}
 
 const express = require('express');
 const app = express();
@@ -8,8 +8,8 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
-const authorRouter = require('./routes/authors');
-const bookRouter = require('./routes/books');
+//const authorRouter = require('./routes/authors')
+//const bookRouter = require('.routes/books' )
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname, ' /view');
@@ -30,13 +30,13 @@ db.once('open', () => console.log('Connected to Mongoose'));
 
 //link to our first route (or controller)
 app.use('/', indexRouter);
-app.use('/authors', authorRouter);
-app.use('/books', bookRouter);
+//app.use('/authors', authorRouter);
+//app.use('/books', bookRouter);
 
 
 //Listenning to defined PORT
-app.listen(process.env.PORT ||3000, () => {
-    console.log('The application is running on localhost:3000');
+app.listen(process.env.PORT ||2500, () => {
+    console.log('The application is running on localhost:2500');
 });
 
 
