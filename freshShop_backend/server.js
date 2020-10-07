@@ -8,8 +8,20 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
-//const authorRouter = require('./routes/authors')
-//const bookRouter = require('.routes/books' )
+const aboutRouter = require('./routes/about');
+const cartRouter = require('./routes/cart');
+const checkoutRouter = require('./routes/checkout');
+const contactUsRouter = require('./routes/contact-us');
+const galleryRouter = require('./routes/gallery');
+const myAccountRouter = require('./routes/my-account');
+const shopDetailRouter = require('./routes/shop-detail');
+const shopRouter = require('./routes/shop');
+const wishlistRouter = require('./routes/wishlist');
+
+
+
+
+
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname, ' /view');
@@ -19,6 +31,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
 
 // connecting to mongoose
+/*
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true
@@ -26,12 +39,20 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection;
 db.on('error', error => console.log(error));
 db.once('open', () => console.log('Connected to Mongoose'));
-
+*/
 
 //link to our first route (or controller)
 app.use('/', indexRouter);
-//app.use('/authors', authorRouter);
-//app.use('/books', bookRouter);
+app.use('/', aboutRouter);
+app.use('/', cartRouter);
+app.use('/', checkoutRouter);
+app.use('/', contactUsRouter);
+app.use('/', galleryRouter);
+app.use('/', myAccountRouter);
+app.use('/', shopDetailRouter);
+app.use('/', shopRouter);
+app.use('/', wishlistRouter);
+
 
 
 //Listenning to defined PORT
