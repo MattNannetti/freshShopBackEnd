@@ -1,3 +1,7 @@
+// mongoDB pw = pVMrHdpJRAP9RJm0
+// mongoDB user = mattn
+
+
 //if (process.env.NODE_ENV !== 'production'){
 //    require('dotenv').config();
 //}
