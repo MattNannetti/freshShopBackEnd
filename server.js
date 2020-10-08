@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
 // connecting to mongoose
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority')
+mongoose.connect(process.env.DATABASE_URL ||'mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
