@@ -43,15 +43,16 @@ db.once('open', () => console.log('Connected to Mongoose'));
 
 //link to our first route (or controller)
 app.use('/', indexRouter);
-app.use('/', aboutRouter);
-app.use('/', cartRouter);
-app.use('/', checkoutRouter);
-app.use('/', contactUsRouter);
-app.use('/', galleryRouter);
-app.use('/', myAccountRouter);
-app.use('/', shopDetailRouter);
-app.use('/', shopRouter);
-app.use('/', wishlistRouter);
+app.use('/index', indexRouter);
+app.use('/about', aboutRouter);
+app.use('/cart', cartRouter);
+app.use('/checkout', checkoutRouter);
+app.use('/contact-us', contactUsRouter);
+app.use('/gallery', galleryRouter);
+app.use('/my-account', myAccountRouter);
+app.use('/shop-detail', shopDetailRouter);
+app.use('/shop', shopRouter);
+app.use('/wishlist', wishlistRouter);
 
 
 
