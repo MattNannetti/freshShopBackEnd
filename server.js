@@ -17,6 +17,8 @@ const myAccountRouter = require('./routes/my-account');
 const shopDetailRouter = require('./routes/shop-detail');
 const shopRouter = require('./routes/shop');
 const wishlistRouter = require('./routes/wishlist');
+const registerRouter = require('./routes/register');
+const signinRouter = require('./routes/signin');
 
 
 
@@ -24,7 +26,7 @@ const wishlistRouter = require('./routes/wishlist');
 
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname, ' /view');
+app.set('views', __dirname, ' /views');
 app.set('layout', './views/layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
@@ -53,6 +55,8 @@ app.use('/my-account', myAccountRouter);
 app.use('/shop-detail', shopDetailRouter);
 app.use('/shop', shopRouter);
 app.use('/wishlist', wishlistRouter);
+app.use('/register', registerRouter);
+app.use('/signin', signinRouter);
 
 
 

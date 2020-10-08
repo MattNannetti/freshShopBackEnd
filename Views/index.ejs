@@ -15,17 +15,17 @@
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                        <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                        <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        <li><a href="/my-account"><i class="fa fa-user s_color"></i> My Account</a></li>
+                        <li><a href="/shop-detail"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                        <li><a href="/contact-us"><i class="fas fa-headset"></i> Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box">
-                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                        <option>Register Here</option>
-                        <option>Sign In</option>
+                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In" onChange="location = this.value;">
+                        <option value="register">Register Here</option>
+                        <option value="signin">Sign In</option>
                     </select>
                 </div>
                 <div class="text-slid-box">
@@ -84,7 +84,7 @@
                     <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                     <li class="dropdown active">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                        <a href="/shop" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                         <ul class="dropdown-menu">
                             <li><a href="/shop">Sidebar Shop</a></li>
                             <li><a href="/shop-detail">Shop Detail</a></li>
