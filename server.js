@@ -1,5 +1,6 @@
 // mongoDB pw = pVMrHdpJRAP9RJm0
 // mongoDB user = mattn
+// mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 
 //if (process.env.NODE_ENV !== 'production'){
@@ -39,12 +40,14 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
 // connecting to mongoose
 
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true
-});
-const db = mongoose.connection;
-db.on('error', error => console.log(error));
-db.once('open', () => console.log('Connected to Mongoose'));
+mongoose.connect('mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority')
+.then(() => {
+    console.log('Successfully connected to MongoDB Atlas!');
+  })
+  .catch((error) => {
+    console.log('Unable to connect to MongoDB Atlas!');
+    console.error(error);
+  });
 
 
 //link to our first route (or controller)
