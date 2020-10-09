@@ -23,9 +23,10 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box">
-                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                        <option>Register Here</option>
-                        <option>Sign In</option>
+                    <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In" onChange="location = this.value;">
+                        <option value="/index">Register/Sign In</option>
+                        <option value="/register">Register Here</option>
+                        <option value="/signin">Sign In</option>
                     </select>
                 </div>
                 <div class="text-slid-box">
@@ -165,17 +166,18 @@
 <!-- start REGISTER page-->
 <div style="text-align: center; margin: auto; padding: 50px;">
     <h2>Register</h2>
-    <form action="/index" method="POST">
+    <form action="/register" method="POST">
         <label for="username">Username:</label><br>
-        <input name="username" type="text" required><br>
+        <input name="username" id="username" type="text" required><br>
         <label for="email">Email:</label><br>
-        <input name="email" type="email" required><br>
+        <input name="email" id="email" type="email" required><br>
         <label for="pass1">Password:</label><br>
-        <input name="pass1" type="password" required><br>
+        <input name="pass1" id="pass1" type="password" required><br>
         <label for="pass2">Confirm password:</label><br>
-        <input name="pass2" type="password" required><br>
+        <input name="pass2" id="pass2" type="password" required><br>
         <button type="submit" style="margin: 10px;">Register!</button>
     </form>
+    <a href="/signin">Already have an account? Sign In</a>
 </div>
 
 

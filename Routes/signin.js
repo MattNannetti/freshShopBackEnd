@@ -6,7 +6,11 @@ router.get('/', (req, res) =>{
     res.render('./views/signin');
 });
 
+/*
+router.post('/', (req, res) => {
 
+}));
 
+*/
 
 module.exports = router;

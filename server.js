@@ -30,22 +30,25 @@ const signinRouter = require('./routes/signin');
 
 
 
+
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname, ' /views');
 app.set('layout', './views/layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}));
+app.use(express.urlencoded({ extended: false }));
+
 
 // connecting to mongoose
-
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL ||'mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/freshShop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
-    console.log('Successfully connected to MongoDB Atlas!');
+    console.log('Successfully connected to MongoDB');
   })
   .catch((error) => {
-    console.log('Unable to connect to MongoDB Atlas!');
+    console.log('Unable to connect to MongoDB');
     console.error(error);
   });
 
@@ -64,6 +67,7 @@ app.use('/shop', shopRouter);
 app.use('/wishlist', wishlistRouter);
 app.use('/register', registerRouter);
 app.use('/signin', signinRouter);
+
 
 
 
