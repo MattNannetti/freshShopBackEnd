@@ -2,11 +2,10 @@
 // mongoDB user = mattn
 // mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/<dbname>?retryWrites=true&w=majority
 
-/*
+
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
-*/
 
 const express = require('express');
 const app = express();
@@ -44,7 +43,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // connecting to mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://mattn:pVMrHdpJRAP9RJm0@cluster0.4opmd.mongodb.net/freshShop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     console.log('Successfully connected to MongoDB');
   })
